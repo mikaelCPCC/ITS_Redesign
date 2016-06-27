@@ -1,0 +1,43 @@
+<h2>How to use the Online Service Avalibility System</h2>
+
+<p><strong>All of these actions must be performed using the HTML editor and <u>not</u> the rich text editor.</strong> We recommend using a third-party program such as <a href="https://notepad-plus-plus.org/download/v6.8.8.html" target="_blank">Notepad++</a> or <a href="https://www.sublimetext.com/3" target="_blank">Sublime Text</a> to make these changes as it will be much easier to follow the code outside of the Plone editing enviorment. Simply copy and paste the source HTML in and out of Plone and into the third party editor.</p>
+
+<h2>Changing the icon status indicator.</h2>
+
+<ul>
+	<li>To change the icon between different service states, locate the service you will need to change. This is indicated by an HTML comment at the top of the section 
+		(e.g.,  <span style="font-family:Courier New,Courier, monospace;">&lt;&#45;&#45; BLACKBOARD SECTION &#45;&#45;&gt;</span>).</li>
+	<li>Locate the  <span style="font-family:Courier New,Courier, monospace;">&lt;img&gt;</span> tag (e.g.,  <span style="font-family:Courier New,Courier, monospace;">&lt;<strong>img src=&quot;http://webstaging.cpcc.edu/its/images/green/&quot;&gt;</strong></span>).</li>
+	<li>Simply change the color name after the  <span style="font-family:Courier New,Courier, monospace;">&#47;images&#47;osa&#47;</span> markup to the icon you want to display on the page.</li>
+	<ul>
+		<li>The avaliable icons are as follows:</li>
+		<li>green &#61; <img src="its/images/osa/green" alt="This service is currently available with no known issues"></li>
+		<li>yellow &#61; <img src="its/images/osa/yellow" alt="This service is available but some users have reported a problem. Please contact the help desk if you are experiencing issues using this service."></li>
+		<li>red &#61; <img src="its/images/osa/red" alt="Service is Down"></li>
+	</ul>
+	<li>Changing the color will only change the icon. Please see below for instructions on changing the message.</li>
+</ul>
+<br>
+<h2>Changing the broadcast message</h2>
+<p>All messages are universal and controlled through the use of HTML comment tags. Comment tags control what can be seen by the public and what cannot. Here is an example of a comment tag:<br>
+<span style="font-family:Courier New,Courier, monospace;">&lt;!&#45;&#45;This is a comment. Comments are not displayed in the browser&#45;&#45;&gt;</span>
+<br>
+You'll notice that every broadcast message is listed in each section under the <strong>SET STATUS HERE. REMOVE COMMENT TAGS AS NEEDED</strong> HTML comment. The four broadcast messages are as follows:</p> 
+<ul>
+	<li>This service is currently available with no known issues. (for use with green icon)</li>
+	<li>This service is available but some users have reported a problem. Please contact the help desk if you are experiencing issues using this service. (for use with the yellow icon)</li>
+	<li>This service is currently not available and the problem is being addressed. Please check this page for updates. (for use with the red icon)</li>
+</ul>	
+<p>The default broadcast message is: <strong>This service is currently available with no known issues</strong>. <br>
+If you need to change to another message, simply remove the <br><br>
+<span style="font-family:Courier New,Courier, monospace;">&lt;!&#45;&#45;</span><br> from the beginning of the message you want to use, and <br><span style="font-family:Courier New,Courier, monospace;">&#45;&#45;&gt;</span> from the end.<br> 
+The message is now active.</p>
+<p>To deactivate a broadcast message simply add <span style="font-family:Courier New,Courier, monospace;">&lt;!&#45;&#45;</span> to the front of the message, and <span style="font-family:Courier New,Courier, monospace;">&#45;&#45;&gt;</span> to the end of the message. </p><br>
+
+<p>When the service returns to a normal state, simply reverse the above the instructions to set it back to the default notification.</p>
+
+
+
+
+
+
